@@ -1,0 +1,18 @@
+
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{name}}
+{% endblock %}
+
+{% block body %}
+<div style="padding: 5px;">
+	{% if content is not None %}
+    	{{content | safe }}
+    	
+	{% else %}
+		Requested page not found
+	{% endif %}
+</div>
+{% endblock %}
+
